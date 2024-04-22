@@ -18,7 +18,6 @@ export default function Header() {
             
         </div>
         <div className='flex items-center gap-10'>
-            
             <DarkModeToggle />
         </div>
     </div>

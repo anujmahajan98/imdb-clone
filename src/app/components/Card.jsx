@@ -10,7 +10,7 @@ export default function Card( {result} ) {
                     transform transition-transform duration-300 ease-in-out hover:scale-105'>
         <Link href={`/movie/${result.id}`}>
             <Image src={`https://image.tmdb.org/t/p/original${
-                result.backdrop_path || result.poster.path
+                result.backdrop_path || result.poster_path
             }`}
             width = {500}
             height = {300}

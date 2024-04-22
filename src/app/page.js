@@ -11,8 +11,6 @@ export default async function Home( { searchParams } ) {
       language=en-US&page=1`
   );
 
-  console.log(res)
-
   if(!res.ok){
     console.log("Failed")
     throw new Error("Failed to fetch the movies")
