@@ -32,9 +32,9 @@ export default function Header() {
                 <MenuItem title = 'About' address = "/about" Icon = {BsFillInfoCircleFill}/>
             </div>
 
-            <div className='flex items-center gap-10'>
+            <div className='flex items-center gap-10 light:bg-black'>
                 <div className='flex justify-between items-center'>
-                    <form className='bg-slate-50 p-3 rounded-lg flex justify-between item-center'
+                    <form className='bg-slate-200 dark:bg-slate-50 p-3 rounded-lg flex justify-between item-center'
                     onSubmit = {handleSubmit}>
                         <input type='text' placeholder='Search ...' 
                         className='bg-transparent focus:outline-none w-24 sm:w-64 dark:text-black'
