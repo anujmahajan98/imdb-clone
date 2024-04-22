@@ -1,14 +1,17 @@
 'use client'
 
 import Link from 'next/link'
-import React from 'react'
+import React, { Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
+
+
 
 export default function NavbarItem({title, param}) {
     const searchParam = useSearchParams();
     const genre = searchParam.get('genre');
 
   return (
+    <Suspense fallback={<div>Loading...</div>}>
     <div>
         <Link 
             className = {`hover:text-amber-600 font-semibold
@@ -17,5 +20,6 @@ export default function NavbarItem({title, param}) {
             >{title}
         </Link>
     </div>
+    </Suspense>
   )
 }
