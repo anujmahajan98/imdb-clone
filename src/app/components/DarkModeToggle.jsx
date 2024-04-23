@@ -46,9 +46,9 @@ export default function DarkModeToggle() {
                 onChange={toggleTheme}
             />
             <label htmlFor="darkModeToggle" className="cursor-pointer">
-                <div className="w-12 h-7 bg-gray-400 rounded-full shadow-inner hover:text-amber-400">
+                <div className="w-12 h-7 bg-gray-400 rounded-full hover:text-amber-400">
                 {/* <div className={`absolute left-0 top-0 w-6 h-6 bg-white rounded-full shadow transition-transform transform ${isChecked ? 'translate-x-4' : 'translate-x-0'}`}> */}
-                    <div className={`absolute left-2 top-1.5 w-6 h-6 shadow transition-transform transform ${isChecked ? 'translate-x-4' : 'translate-x-0'}`}>
+                    <div className={`absolute left-2 top-1.5 bg-gray-400 shadow rounded-full transition-transform transform ${isChecked ? 'translate-x-4' : 'translate-x-0'}`}>
                     {/* {currentTheme === 'dark' ? <MdLightMode /> : <MdDarkMode />} */}
                     {isChecked ? <MdLightMode /> : <MdDarkMode />}
                     </div>
