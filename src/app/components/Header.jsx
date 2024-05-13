@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import MenuItem from './MenuItem'
 import { AiFillHome } from 'react-icons/ai'
 import { BsFillInfoCircleFill } from 'react-icons/bs'
@@ -8,10 +8,12 @@ import Link from 'next/link'
 import DarkModeToggle from './DarkModeToggle'
 import {FaSearch} from 'react-icons/fa'
 import { useRouter } from 'next/navigation'
+import useDebounce from './UseDebounce'
 
 export default function Header() {
 
     const [search, setSearch] = useState('')
+    const debouncedSearch = useDebounce(search, 500);
     const router = useRouter();
 
     const handleSubmit = (e) => {
@@ -19,6 +21,12 @@ export default function Header() {
         console.log(search)
         router.push(`/search/${search}`);
     }
+
+    useEffect(() => {
+        if (debouncedSearch) {
+          router.push(`/search/${debouncedSearch}`);
+        }
+      }, [debouncedSearch]);
     
 
   return (
